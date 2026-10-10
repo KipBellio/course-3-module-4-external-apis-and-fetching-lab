@@ -43,7 +43,12 @@ function clearUI() {
 
 function showError(message) {
     errorMessage.textContent = message;
-    errorMessage.style.display = "block";
+    errorMessage.classList.remove("hidden"); 
+}
+
+function clearError() {
+    errorMessage.textContent = "";
+    errorMessage.classList.add("hidden");
 }
 
 fetchBtn.addEventListener("click", () => {
